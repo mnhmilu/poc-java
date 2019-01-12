@@ -22,7 +22,14 @@ public class RedisConfig {
 
 	@Bean
 	JedisConnectionFactory jedisConnectionFactory() {
-		return new JedisConnectionFactory();
+		//return new JedisConnectionFactory();
+
+		// remote redis
+		JedisConnectionFactory jedisConFactory
+				= new JedisConnectionFactory();
+		jedisConFactory.setHostName("192.168.0.100");
+		jedisConFactory.setPort(6379);
+		return jedisConFactory;
 	}
 
 	@Bean
