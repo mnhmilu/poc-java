@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "594707712619",
+    "firebase_url": "https://merchantapp-da7f0.firebaseio.com",
+    "project_id": "merchantapp-da7f0",
+    "storage_bucket": "merchantapp-da7f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594707712619:android:7bd71543f89d056a",
+        "android_client_info": {
+          "package_name": "com.example.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594707712619-q13dhl0322cskb4dsk67ic3dp1rg018h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1JjEtSUBYho55lLPyuV7HH4syMxxmoZs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
