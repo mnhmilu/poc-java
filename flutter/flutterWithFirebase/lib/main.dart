@@ -53,8 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final FirebaseMessaging _messaging = FirebaseMessaging();
 
   int _counter = 0;
-
-
+  String _message ="";
   @override
   void initState() {
     super.initState();
@@ -62,6 +61,19 @@ class _MyHomePageState extends State<MyHomePage> {
     _messaging.getToken().then((token) {
       print(token);
     });
+    
+        _messaging.configure(
+
+     onMessage: (Map<String, dynamic> message)
+         {
+           print(message);
+           _message=message.toString();
+         }
+
+
+    );    
+    
+    
   }
 
   void _incrementCounter() {
@@ -110,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+   '$_message',
             ),
             Text(
               '$_counter',
