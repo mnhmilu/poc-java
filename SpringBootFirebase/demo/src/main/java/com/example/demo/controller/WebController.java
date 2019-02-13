@@ -27,7 +27,7 @@ public class WebController {
 
         try {
             String pushNotification = androidPushNotificationsService.sendPushNotification(notificationRequest.getDeviceToken(),notificationRequest.getMessage(),notificationRequest.getMessage2()
-                    );
+   ,notificationRequest.getTitle(),notificationRequest.getBody()            );
 
             return new ResponseEntity<>(pushNotification, HttpStatus.OK);
         } catch (IOException e) {
@@ -65,7 +65,7 @@ public class WebController {
         String deviceToken = "fuM5jajR5nA:APA91bF42zQEEOZIdwaD5cXAsHcTpb5ZDXA_8g-uo2MBISXmhJDtPvW8Wzrdy3R8PNU89JEOBZFZgf_WQZwr7JIG1gufqa2WX6IymJjSWeQv691dbQr-Tuaq1W9jQwRjiiHSmlsaPxCA";
         try {
             String pushNotification = androidPushNotificationsService.sendPushNotification(deviceToken, "Hello dude",
-                    "welcome to Ezbitex exchange");
+                    "welcome to Ezbitex exchange","title","body");
 
             return new ResponseEntity<>(pushNotification, HttpStatus.OK);
         } catch (IOException e) {
