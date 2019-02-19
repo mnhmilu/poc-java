@@ -32,6 +32,6 @@ cp -R $RENAMED_ARTIFACT_NAME /opt/tomcat/webapps/
 
 chown -R tomcat:tomcat /opt/tomcat/webapps
 
-echo "###################### Deployment End #######################################"
+echo "###################### Deployment End ########################################"
 
 EOF
