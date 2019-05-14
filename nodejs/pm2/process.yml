@@ -1,0 +1,16 @@
+
+apps:
+  - script   : ./ProxyApi/app.js
+    name     : 'api-proxy-app'
+    instances: 2
+    exec_mode: cluster
+  - script : ./MW/appMw.js
+    name   : 'middleware-worker'
+    instances: 4
+    exec_mode: cluster
+    watch  : true
+    env    :
+      NODE_ENV: development
+      TEST: test_dev
+    env_production:
+      NODE_ENV: production
