@@ -1,0 +1,18 @@
+const mongoose = require('mongoose');
+
+const { Schema } = mongoose;
+
+const autotopuphistoryModel = new Schema(
+    {
+         msisdn:{type:Number},
+        airtimeAmount: { type: Number },
+        trxDate: { type: Date },
+        totalAirTimeCalled: { type: Number },
+        totalAirTimeFailed: { type: Number },
+        totalAirTimeSuccess: { type: Number }
+    }
+, {
+    collection: 'autotopuphistory'
+});
+
+module.exports = mongoose.model('autotopuphistory', autotopuphistoryModel);
