@@ -35,9 +35,6 @@ const validateMandatoryFields = async (request) => {
     return response;
 }
 
-
-
-
 module.exports = {
 
     validateAuthentication,
