@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive test/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "proxyquire": "^2.1.1"
