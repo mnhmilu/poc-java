@@ -13,10 +13,12 @@ public class CPSFileProcessingTest {
     CpsFileProcessService cpsFileProcessService;
     @Autowired
     BankWiseSlotInfoRepository bankWiseSlotInfoRepository;
+    @Autowired
+    KieContainer kieContainer;
     @Test
     void testRepository() throws Exception {
    
-     KieSession kieSession=new DroolsConfiguration().getKieSession();
+        KieSession kieSession = kieContainer.newKieSession();
         try {
             Iterable<MoneyRefundRequestCpsEntityTemp> items = moneyRefundRequestCpsEntityTempRepository.findAll();
             for (MoneyRefundRequestCpsEntityTemp item : items) {
