@@ -1,6 +1,9 @@
 
 Important Notes:
 
+Use procedure as a last attempt to solve problem where generated column value can be change for any new case. Otherwise 
+Drools is good.
+
 1.Becareful about file naming convention 
 
 YourInterfaceName
