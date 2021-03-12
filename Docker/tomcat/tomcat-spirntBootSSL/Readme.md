@@ -20,3 +20,10 @@
 ```sudo docker ps```
 
 ```sudo docker exec -it 024af579e420 bash```
+
+
+### Docker based tocmat 9 configuration
+
+server.xml example
+
+```<Connector port="8443" maxThreads="150" scheme="https" secure="true" SSLEnabled="true" keystoreFile="/usr/local/tomcat/temp/keystore.jks" keystorePass="password" clientAuth="false" keyAlias="selfsigned" sslProtocol="TLS"/>```
