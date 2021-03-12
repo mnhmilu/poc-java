@@ -23,6 +23,8 @@ EXPOSE 8443
 
 ```keytool -import -alias keystore -file keystore.cer -keystore test.truststore```
 
+### Tomcat Docker run with Spring boot API with SSL Configuration by loading custom server.xml and context.xml file 
+
 ```sudo docker build -t mywebapp .```
 
 ```sudo docker run -p 8443:8443 mywebapp```
