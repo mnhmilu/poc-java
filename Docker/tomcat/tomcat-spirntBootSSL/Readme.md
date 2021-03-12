@@ -35,9 +35,34 @@ void checkingHttpsConnectionForMSFReport() {
     ResponseEntity<String> response = restTemplate.exchange("https://localhost:8443/demo-0.0.1-SNAPSHOT/test/echo", HttpMethod.GET, null, String.class);
     System.out.println(response);
     Assertions.assertEquals(200, response.getStatusCodeValue());
-}```
+}
 
 http.client.ssl.trust-store=classpath:truststore/truststore.jks
 http.client.ssl.trust-store-password=password
+
+@Value("${http.client.ssl.trust-store}")
+    private Resource keyStore;
+    @Value("${http.client.ssl.trust-store-password}")
+    private String keyStorePassword;
+
+    @Bean
+    RestTemplate restTemplate() throws Exception {
+         File keyStoreFilePath = new File(keyStore.getURI());
+        SSLContext sslContext = new SSLContextBuilder()
+                .loadTrustMaterial(
+                        keyStoreFilePath,
+                        keyStorePassword.toCharArray()
+                ).build();
+
+        SSLConnectionSocketFactory socketFactory =
+                new SSLConnectionSocketFactory(sslContext);
+        HttpClient httpClient = HttpClients.custom()
+                .setSSLSocketFactory(socketFactory).build();
+
+        HttpComponentsClientHttpRequestFactory factory =
+                new HttpComponentsClientHttpRequestFactory(httpClient);
+        return new RestTemplate(factory);
+    }
+```
 
 
