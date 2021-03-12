@@ -37,9 +37,7 @@ void checkingHttpsConnectionForMSFReport() {
     Assertions.assertEquals(200, response.getStatusCodeValue());
 }```
 
-```
-http.client.ssl.trust-store=classpath:truststore/truststore.jks
-http.client.ssl.trust-store-password=password
-```
+```http.client.ssl.trust-store=classpath:truststore/truststore.jks```
+```http.client.ssl.trust-store-password=password```
 
 
