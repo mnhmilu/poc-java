@@ -5,7 +5,6 @@ COPY server.xml /usr/local/tomcat/conf/
 
 COPY keystore.jks /usr/local/tomcat/temp/
 EXPOSE 8443
-#CMD chmod +x /usr/local/tomcat/bin/catalina.sh
-#CMD ["catalina.sh", "run"]
+
 
 
