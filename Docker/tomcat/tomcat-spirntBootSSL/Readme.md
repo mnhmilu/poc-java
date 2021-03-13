@@ -13,15 +13,18 @@ EXPOSE 8443
 
 ### Keystore and TrustStore Generation (Selfsigned )
 
-```keytool -genkey -keyalg RSA -alias selfsigned -dname "CN=stackoverflow,OU=Hakan,O=Hakan,C=NL" -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -keystore keystore.jks -storepass password -validity 360 -keysize 2048```
 
-//Export the public key
+Create Keystore 
 
-```keytool -v -export -file keystore.cer -keystore keystore.jks -alias selfsigned```
+```sudo keytool -genkey -keyalg RSA -alias selfsigned -dname "CN=stackoverflow,OU=Hakan,O=Hakan,C=NL" -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -keystore keystore.jks -storepass password -validity 360 -keysize 2048```
 
-//Import and create truststore
+Export the public key
 
-```keytool -import -alias keystore -file keystore.cer -keystore test.truststore```
+```sudo keytool -v -export -file keystore.cer -keystore keystore.jks -alias selfsigned```
+
+Import and create truststore
+
+```sudo keytool -import -alias keystore -file keystore.cer -keystore test.truststore```
 
 ### Tomcat Docker run with Spring boot API with SSL Configuration by loading custom server.xml and context.xml file 
 
