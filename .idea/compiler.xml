@@ -6,20 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JavaSecurity" />
+        <module name="SpringBatch" />
+        <module name="SpringData" />
         <module name="JavaBasic" />
+        <module name="JavaSecurity" />
+        <module name="SpringSFTP" />
+        <module name="SpringIntegration" />
+        <module name="Spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JavaBasic" target="11" />
       <module name="JavaSecurity" target="11" />
       <module name="poc" target="1.5" />
+      <module name="Spring" target="11" />
+      <module name="SpringBatch" target="11" />
+      <module name="SpringData" target="11" />
+      <module name="SpringIntegration" target="11" />
+      <module name="SpringSFTP" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JavaBasic" options="" />
-      <module name="JavaSecurity" options="--add-modules java.base" />
+      <module name="JavaSecurity" options="" />
     </option>
   </component>
 </project>

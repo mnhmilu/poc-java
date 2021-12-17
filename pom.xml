@@ -18,6 +18,11 @@
     <modules>
         <module>JavaBasic</module>
         <module>JavaSecurity</module>
+        <module>Spring</module>
+        <module>SpringBatch</module>
+        <module>SpringIntegration</module>
+        <module>SpringSFTP</module>
+        <module>SpringData</module>
     </modules>
 
 
