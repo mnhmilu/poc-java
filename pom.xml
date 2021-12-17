@@ -8,8 +8,16 @@
     <artifactId>poc</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+    </dependencies>
     <modules>
         <module>JavaBasic</module>
+        <module>JavaSecurity</module>
     </modules>
 
 
