@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaBasic/JavaBasic.iml" filepath="$PROJECT_DIR$/JavaBasic/JavaBasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaSecurity/JavaSecurity.iml" filepath="$PROJECT_DIR$/JavaSecurity/JavaSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sharedlibrary/Sharedlibrary.iml" filepath="$PROJECT_DIR$/Sharedlibrary/Sharedlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBatch/SpringBatch.iml" filepath="$PROJECT_DIR$/SpringBatch/SpringBatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringData/SpringData.iml" filepath="$PROJECT_DIR$/SpringData/SpringData.iml" />
