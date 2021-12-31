@@ -11,8 +11,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.1</version>
     </parent>
-
     <modules>
         <module>JavaBasic</module>
         <module>JavaSecurity</module>
@@ -21,8 +21,8 @@
         <module>SpringIntegration</module>
         <module>SpringSFTP</module>
         <module>SpringData</module>
-        <module>SpringRestSSL</module>
         <module>Sharedlibrary</module>
+        <module>SpringBootSSL</module>
     </modules>
 
 

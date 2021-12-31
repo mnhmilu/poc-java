@@ -13,6 +13,7 @@
         <module name="SpringSFTP" />
         <module name="SpringIntegration" />
         <module name="Spring" />
+        <module name="SpringBootSSL" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
       <module name="Sharedlibrary" target="11" />
       <module name="Spring" target="11" />
       <module name="SpringBatch" target="11" />
+      <module name="SpringBootSSL" target="11" />
       <module name="SpringData" target="11" />
       <module name="SpringIntegration" target="11" />
       <module name="SpringRestSSL" target="11" />

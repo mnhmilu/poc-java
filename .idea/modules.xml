@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Sharedlibrary/Sharedlibrary.iml" filepath="$PROJECT_DIR$/Sharedlibrary/Sharedlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring/Spring.iml" filepath="$PROJECT_DIR$/Spring/Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBatch/SpringBatch.iml" filepath="$PROJECT_DIR$/SpringBatch/SpringBatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SrpingBootSSL/SpringBootSSL.iml" filepath="$PROJECT_DIR$/SrpingBootSSL/SpringBootSSL.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringData/SpringData.iml" filepath="$PROJECT_DIR$/SpringData/SpringData.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIntegration/SpringIntegration.iml" filepath="$PROJECT_DIR$/SpringIntegration/SpringIntegration.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSFTP/SpringSFTP.iml" filepath="$PROJECT_DIR$/SpringSFTP/SpringSFTP.iml" />
