@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringBatch/SpringBatch.iml" filepath="$PROJECT_DIR$/SpringBatch/SpringBatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringData/SpringData.iml" filepath="$PROJECT_DIR$/SpringData/SpringData.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringIntegration/SpringIntegration.iml" filepath="$PROJECT_DIR$/SpringIntegration/SpringIntegration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringRestSSL/SpringRestSSL.iml" filepath="$PROJECT_DIR$/SpringRestSSL/SpringRestSSL.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSFTP/SpringSFTP.iml" filepath="$PROJECT_DIR$/SpringSFTP/SpringSFTP.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/poc.iml" filepath="$PROJECT_DIR$/.idea/poc.iml" />
     </modules>

@@ -10,6 +10,7 @@
         <module name="SpringData" />
         <module name="JavaBasic" />
         <module name="JavaSecurity" />
+        <module name="SpringRestSSL" />
         <module name="SpringSFTP" />
         <module name="SpringIntegration" />
         <module name="Spring" />
@@ -23,6 +24,7 @@
       <module name="SpringBatch" target="11" />
       <module name="SpringData" target="11" />
       <module name="SpringIntegration" target="11" />
+      <module name="SpringRestSSL" target="11" />
       <module name="SpringSFTP" target="11" />
     </bytecodeTargetLevel>
   </component>
