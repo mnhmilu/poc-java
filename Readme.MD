@@ -1,6 +1,16 @@
-## POC List:
-
+# Spring Boot Multi module Maven Project POC List:
+- 
+- Shared Library (common code base) 
 - Java Basic
-  - [Java Security](https://github.com/mnhmilu/poc/tree/master/JavaSecurity#readme)
-- Spring Framwork
-  - Rest SSL [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringRestSSL)
+  - [ ] [Java Security](https://github.com/mnhmilu/poc/tree/master/JavaSecurity#readme)
+- Spring Framework
+  - [ ] Rest SSL [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringRestSSL)
+  - [ ] Spring Batch
+  - [ ] Spring Data
+  - [ ] Spring SFTP
+  - [ ] Spring Integration
+  - [ ] Spring with Firebase
+  - [ ] Spring with Redis
+  - [ ] Spring with Localstack(AWS)
+  - [ ] Spring Security 
+  - [ ] Spring ThymeLeaf
