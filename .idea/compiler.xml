@@ -10,9 +10,7 @@
         <module name="SpringData" />
         <module name="JavaBasic" />
         <module name="JavaSecurity" />
-        <module name="SpringRestSSL" />
         <module name="SpringSFTP" />
-        <module name="Sharedlibrary" />
         <module name="SpringIntegration" />
         <module name="Spring" />
       </profile>
@@ -32,8 +30,14 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="JavaBasic" options="" />
-      <module name="JavaSecurity" options="" />
+      <module name="JavaBasic" options="-parameters" />
+      <module name="JavaSecurity" options="-parameters" />
+      <module name="Spring" options="-parameters" />
+      <module name="SpringBatch" options="-parameters" />
+      <module name="SpringData" options="-parameters" />
+      <module name="SpringIntegration" options="-parameters" />
+      <module name="SpringRestSSL" options="-parameters" />
+      <module name="SpringSFTP" options="-parameters" />
     </option>
   </component>
 </project>

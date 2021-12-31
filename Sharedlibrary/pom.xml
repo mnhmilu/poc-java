@@ -6,8 +6,8 @@
         <artifactId>poc</artifactId>
         <groupId>groupId</groupId>
         <version>1.0-SNAPSHOT</version>
-
     </parent>
+    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
     <description>Common Code Library to share</description>
     <artifactId>Sharedlibrary</artifactId>
