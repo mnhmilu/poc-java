@@ -1,7 +1,7 @@
-# Spring Boot Multi module Maven Project POC List:
-- 
-- Shared Library (common code base) 
-- Java Basic
+# Project POC List:
+- Description: Spring Boot Multi module maven project 
+- Shared Library: common shared code base 
+- Java Basic: Basic Java POC
   - [ ] [Java Security](https://github.com/mnhmilu/poc/tree/master/JavaSecurity#readme)
 - Spring Framework
   - [ ] Rest SSL [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringRestSSL)
@@ -14,3 +14,4 @@
   - [ ] Spring with Localstack(AWS)
   - [ ] Spring Security 
   - [ ] Spring ThymeLeaf
+  - [ ] Spring Flux
