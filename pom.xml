@@ -8,11 +8,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <description>Root Maven project</description>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.1</version>
-    </parent>
     <modules>
         <module>JavaBasic</module>
         <module>JavaSecurity</module>
@@ -25,5 +20,21 @@
         <module>SpringBootSSL</module>
     </modules>
 
+<!--    <project...>-->
+<!--    <modelVersion>4.0.0</modelVersion>-->
+<!--    <groupId>net.codejava</groupId>-->
+<!--    <artifactId>MyCompany</artifactId>-->
+<!--    <version>0.0.1-SNAPSHOT</version>-->
 
+<!--    <packaging>pom</packaging>-->
+
+<!--    <name>My Company</name>-->
+<!--    <description>Root Maven project</description>-->
+
+<!--    <modules>-->
+<!--        <module>SharedLibrary</module>-->
+<!--        <module>AdminApp</module>-->
+<!--        <module>CustomerApp</module>-->
+<!--    </modules>-->
+<!--</project>-->
 </project>

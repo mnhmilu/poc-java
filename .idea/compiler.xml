@@ -32,14 +32,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="JavaBasic" options="-parameters" />
-      <module name="JavaSecurity" options="-parameters" />
-      <module name="Spring" options="-parameters" />
-      <module name="SpringBatch" options="-parameters" />
-      <module name="SpringData" options="-parameters" />
-      <module name="SpringIntegration" options="-parameters" />
+      <module name="JavaBasic" options="" />
+      <module name="JavaSecurity" options="" />
+      <module name="Spring" options="" />
+      <module name="SpringBatch" options="" />
+      <module name="SpringBootSSL" options="-parameters" />
+      <module name="SpringData" options="" />
+      <module name="SpringIntegration" options="" />
       <module name="SpringRestSSL" options="-parameters" />
-      <module name="SpringSFTP" options="-parameters" />
+      <module name="SpringSFTP" options="" />
     </option>
   </component>
 </project>
