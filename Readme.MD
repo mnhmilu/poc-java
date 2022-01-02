@@ -4,7 +4,7 @@
 - Java Basic: Basic Java POC
   - [ ] [Java Security](https://github.com/mnhmilu/poc/tree/master/JavaSecurity#readme)
 - Spring Framework
-  - [ ] Rest SSL [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringRestSSL)
+  - [ ] Spring Boot with SSL [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringRestSSL)
   - [ ] Spring Batch
   - [ ] Spring Data
   - [ ] Spring SFTP
