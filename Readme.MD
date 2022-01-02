@@ -11,7 +11,7 @@
   - [ ] Spring Integration
   - [ ] Spring with Firebase
   - [ ] Spring with Redis
-  - [ ] Spring with Localstack(AWS)
+  - [ ] Spring with Localstack(AWS) --->
   - [ ] Spring Security 
   - [ ] Spring ThymeLeaf
   - [ ] Spring Flux
