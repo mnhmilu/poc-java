@@ -18,6 +18,7 @@
         <module>SpringData</module>
         <module>Sharedlibrary</module>
         <module>SpringBootSSL</module>
+        <module>SpringBootLocalstack</module>
     </modules>
 
 <!--    <project...>-->
