@@ -1,4 +1,6 @@
 
+## Step 1: Pre-pare Backend
+
 ### Docker file
 
 ```FROM tomcat:9-jdk11
@@ -27,7 +29,7 @@ Import and create truststore
 
 ```sudo keytool -import -alias keystore -file keystore.cer -keystore test.truststore```
 
-### Docker based tocmat 9 configuration
+### Docker based tomcat 9 configuration
 
 server.xml example
 
@@ -46,42 +48,10 @@ sudo docker ps
 
 sudo docker exec -it 024af579e420 bash
 ```
+##Step 2: To Run Test as a client 
 
-### Client Applicaiton Setup
-
-```@Test
-void checkingHttpsConnectionForMSFReport() {
-    ResponseEntity<String> response = restTemplate.exchange("https://localhost:8443/SrpingBootSSL-0.0.1-SNAPSHOT/test/echo", HttpMethod.GET, null, String.class);
-    System.out.println(response);
-    Assertions.assertEquals(200, response.getStatusCodeValue());
-}
-
-http.client.ssl.trust-store=classpath:truststore/truststore.jks
-http.client.ssl.trust-store-password=password
-
-@Value("${http.client.ssl.trust-store}")
-    private Resource keyStore;
-    @Value("${http.client.ssl.trust-store-password}")
-    private String keyStorePassword;
-
-    @Bean
-    RestTemplate restTemplate() throws Exception {
-         File keyStoreFilePath = new File(keyStore.getURI());
-        SSLContext sslContext = new SSLContextBuilder()
-                .loadTrustMaterial(
-                        keyStoreFilePath,
-                        keyStorePassword.toCharArray()
-                ).build();
-
-        SSLConnectionSocketFactory socketFactory =
-                new SSLConnectionSocketFactory(sslContext);
-        HttpClient httpClient = HttpClients.custom()
-                .setSSLSocketFactory(socketFactory).build();
-
-        HttpComponentsClientHttpRequestFactory factory =
-                new HttpComponentsClientHttpRequestFactory(httpClient);
-        return new RestTemplate(factory);
-    }
-```
+- Clean -> Build -> Install
+- Make sure truststore copied into test->resource folder
+- Mind test report at target -> surefire-reports -> *.txt file
 
 
