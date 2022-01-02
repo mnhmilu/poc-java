@@ -1,5 +1,5 @@
 FROM tomcat:9-jdk11
-ADD ./target/demo-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
+ADD ./target/SrpingBootSSL-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
 
 COPY server.xml /usr/local/tomcat/conf/
 

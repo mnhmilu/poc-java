@@ -27,26 +27,15 @@ Import and create truststore
 
 ```sudo keytool -import -alias keystore -file keystore.cer -keystore test.truststore```
 
-### Tomcat Docker run with Spring boot API with SSL Configuration by loading custom server.xml and context.xml file
-
-```sudo docker build -t mywebapp .```
-
-```sudo docker run -p 8443:8443 mywebapp```
-
-//inspect docker container
-
-```sudo docker ps```
-
-```sudo docker exec -it 024af579e420 bash```
-
-
 ### Docker based tocmat 9 configuration
 
 server.xml example
 
 ```<Connector port="8443" maxThreads="150" scheme="https" secure="true" SSLEnabled="true" keystoreFile="/usr/local/tomcat/temp/keystore.jks" keystorePass="password" clientAuth="false" keyAlias="selfsigned" sslProtocol="TLS"/>```
 
-### Important Command
+### Tomcat Docker run with Spring boot API with SSL Configuration by loading custom server.xml and context.xml file
+
+> IDE->Maven-> Install (will generate war file)
 
 ```
 sudo docker build -t mywebapp .
@@ -62,7 +51,7 @@ sudo docker exec -it 024af579e420 bash
 
 ```@Test
 void checkingHttpsConnectionForMSFReport() {
-    ResponseEntity<String> response = restTemplate.exchange("https://localhost:8443/demo-0.0.1-SNAPSHOT/test/echo", HttpMethod.GET, null, String.class);
+    ResponseEntity<String> response = restTemplate.exchange("https://localhost:8443/SrpingBootSSL-0.0.1-SNAPSHOT/test/echo", HttpMethod.GET, null, String.class);
     System.out.println(response);
     Assertions.assertEquals(200, response.getStatusCodeValue());
 }
