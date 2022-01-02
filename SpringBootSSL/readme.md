@@ -48,7 +48,7 @@ sudo docker ps
 
 sudo docker exec -it 024af579e420 bash
 ```
-##Step 2: To Run Test as a client 
+## Step 2: To Run Test as a client 
 
 - Clean -> Build -> Install
 - Make sure truststore copied into test->resource folder
