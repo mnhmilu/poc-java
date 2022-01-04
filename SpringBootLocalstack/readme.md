@@ -87,6 +87,9 @@ $ sh config/ssm-parameters.sh
 
 > aws ssm --endpoint-url http://localhost:4566 put-parameter --name "/dev/someparam/param1" --type SecureString --value "param1value" --overwrite
 
+> aws ssm --endpoint-url http://localhost:4566 get-parameter --name dev/someparam/param1
+
+
 ### SQS
 > aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name dev-queue
 
