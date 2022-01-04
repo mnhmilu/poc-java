@@ -11,7 +11,7 @@
   - [ ] Spring Integration
   - [ ] Spring with Firebase
   - [ ] Spring with Redis
-  - [ ] Spring with Localstack(AWS) --->
+  - [ ] Spring with Localstack(AWS) [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringBootLocalstack#poc-list)
   - [ ] Spring Security 
   - [ ] Spring ThymeLeaf
   - [ ] Spring Flux
