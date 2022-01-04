@@ -7,6 +7,86 @@
 - [ ] AWS SNS
 
 ### Localstack Readiness
+#### Prerequisite:
 
+1. AWS-CLI (V1)
+2. Docker-Compose util
+3. Docker
+
+###### Create mock aws crdentials file (method 1):
+
+```
+$ sudo touch ~/.aws/credentials
+$ sudo nano ~/.aws/credentials
+```
+
+Put below lines in the file ~/.aws/credentials and save it.
+```
+[default]
+aws_access_key_id = fakeMyKeyId
+aws_secret_access_key = fakeSecretAccessKey
+```
+To view aws configuration
+```
+$sudo aws configure list
+```
+Create mock aws config file:
+```
+$ sudo touch  ~/.aws/config
+$ sudo nano  ~/.aws/config
+```
+
+Put below lines in the file ~/.aws/config and save it.
+
+```
+[default]
+region = ap-southeast-1
+output_format = json
+```
+
+###### Create mock aws crdentials file (method 2):
+```
+$aws configure
+
+AWS Access Key ID : fakeMyKeyId
+AWS Secret Access Key: fakeSecretAccessKey
+Default region name: ap-southeast-1
+Default output format: json
+```
+cd to project's docker compose file. Run :
+
+```
+$ sudo docker-compose up
+```
+#### To install DynamoDB Admin UI
+
+https://github.com/aaronshaf/dynamodb-admin
+
+#### To configure DynamoDB Admin UI
+```
+AWS_REGION=ap-southeast-1 AWS_ACCESS_KEY_ID=fakeMyKeyId AWS_SECRET_ACCESS_KEY=fakeSecretAccessKey dynamodb-admin
+```
+
+#### To run DynamoDB Admin UI
+```
+DYNAMO_ENDPOINT=http://localhost:4566 dynamodb-admin --open
+```
+
+#### To create initial infra ( table, data etc )
+For Linux user, you have to execute this command from the project root directory
+```
+$ sh config/dynamodb/dynamodb.sh
+```
+#### To create ssm parameters
+For linux user, you have to execute this command from the project root directory
+
+```
+$ sh config/ssm-parameters.sh
+```
+### SQS
+
+> aws ssm --endpoint-url http://localhost:4566 put-parameter --name "/dev/someparam/param1" --type SecureString --value "param1value" --overwrite
 
 ### AWS DynamoDB
+
+### 
