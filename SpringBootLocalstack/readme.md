@@ -91,11 +91,14 @@ $ sh config/ssm-parameters.sh
 > aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name dev-queue
 
 
-### AWS DynamoDB
+### DynamoDB
 
 > aws dynamodb --endpoint-url http://localhost:4566 create-table --table-name dev-product --attribute-definitions AttributeName=organizationCode,AttributeType=S AttributeName=productId,AttributeType=S --key-schema AttributeName=organizationCode,KeyType=HASH AttributeName=productId,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 
 - Add local index (ref)
 - Add global index (ref)
 
-### 
+### S3
+
+> aws --endpoint-url=http://localhost:4566 s3 mb s3://bucket
+> aws --endpoint-url=http://localhost:4566 s3 cp ./config/s3/file.txt s3://bucket
