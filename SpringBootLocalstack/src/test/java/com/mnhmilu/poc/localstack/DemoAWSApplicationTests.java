@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
@@ -26,9 +28,10 @@ class DemoAWSApplicationTests {
 
     @Test
     public void testSSMConfig() {
-        //todo: manually put ssm param via command , now checking if value is available or not
-       SSMClient ssmClient = new SSMClient(appName,appProfile,ssmEndPointUrl,ssmEndPointRegion);
-       assertEquals(ssmClient.getSSMParameterValue("param1"),"param1value");
+      //todo: manually put ssm param via command , now checking if value is available or not
+      SSMClient ssmClient = new SSMClient(appName,appProfile,ssmEndPointUrl,ssmEndPointRegion);
+      assertEquals(ssmClient.getSSMParameterValue("param1"),"param1value");
+      Map<String, String> apiKeys=ssmClient.getSsmParams();
+      assertEquals(apiKeys.get("param1"),"param1value");
     }
-
 }
