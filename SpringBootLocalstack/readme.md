@@ -83,9 +83,13 @@ For linux user, you have to execute this command from the project root directory
 ```
 $ sh config/ssm-parameters.sh
 ```
-### SQS
+### SSM
 
 > aws ssm --endpoint-url http://localhost:4566 put-parameter --name "/dev/someparam/param1" --type SecureString --value "param1value" --overwrite
+
+### SQS
+> aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name dev-queue
+
 
 ### AWS DynamoDB
 
