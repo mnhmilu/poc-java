@@ -1,11 +1,10 @@
 ## POC List
 - [X] Localstack 
-- [ ] AWS DynamoDB
+- [X] AWS DynamoDB
 - [ ] AWS SQS
 - [X] AWS SSM 
-- [ ] AWS EC2
 - [ ] AWS SNS
-- [ ] AWS ElasticChace
+- [ ] AWS ElasticCace
 
 ### Localstack Readiness
 #### Prerequisite:
