@@ -68,6 +68,13 @@ https://github.com/aaronshaf/dynamodb-admin
 AWS_REGION=ap-southeast-1 AWS_ACCESS_KEY_ID=fakeMyKeyId AWS_SECRET_ACCESS_KEY=fakeSecretAccessKey dynamodb-admin
 ```
 
+### execute cmd before run test 
+
+> sh start.sh
+
+
+## Or
+
 #### To run DynamoDB Admin UI
 ```
 DYNAMO_ENDPOINT=http://localhost:4566 dynamodb-admin --open
