@@ -78,6 +78,10 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.13" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.13" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.3.13" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-dynamodb:1.11.356" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-s3:1.11.356" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-kms:1.11.356" level="project" />
+    <orderEntry type="library" name="Maven: com.amazonaws:jmespath-java:1.11.356" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.11.1" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.14.1" level="project" />
@@ -96,7 +100,6 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.13.0" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.8.1" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:aws-java-sdk-ssm:1.11.665" level="project" />
-    <orderEntry type="library" name="Maven: com.amazonaws:jmespath-java:1.11.665" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.6.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.6.1" level="project" />
   </component>

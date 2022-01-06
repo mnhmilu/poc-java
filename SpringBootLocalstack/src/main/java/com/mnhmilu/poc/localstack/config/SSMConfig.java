@@ -1,8 +1,4 @@
 package com.mnhmilu.poc.localstack.config;
-
-//import com.bkash.savingsdps.core.common.ssm.SSMClient;
-//import com.bkash.savingsdps.core.common.ssm.SSMParameterService;
-
 import com.mnhmilu.poc.localstack.client.SSMClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

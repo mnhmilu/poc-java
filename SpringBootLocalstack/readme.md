@@ -97,10 +97,25 @@ $ sh config/ssm-parameters.sh
 
 ### DynamoDB
 
-> aws dynamodb --endpoint-url http://localhost:4566 create-table --table-name dev-product --attribute-definitions AttributeName=organizationCode,AttributeType=S AttributeName=productId,AttributeType=S --key-schema AttributeName=organizationCode,KeyType=HASH AttributeName=productId,KeyType=RANGE --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+> aws dynamodb --endpoint-url http://localhost:4566 create-table \
+--table-name dev-subscription \
+--attribute-definitions AttributeName=walletNo,AttributeType=S AttributeName=externalRequestId,AttributeType=S AttributeName=accountNo,AttributeType=S \
+--key-schema AttributeName=walletNo,KeyType=HASH AttributeName=externalRequestId,KeyType=RANGE \
+--provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 \
+--local-secondary-indexes \
+"[{\"IndexName\": \"index-accountNo\",
+\"KeySchema\":[{\"AttributeName\":\"walletNo\",\"KeyType\":\"HASH\"}, \
+{\"AttributeName\":\"accountNo\",\"KeyType\":\"RANGE\"}],
+\"Projection\":{\"ProjectionType\":\"ALL\"}}]"
 
-- Add local index (ref)
-- Add global index (ref)
+
+
+> aws dynamodb --endpoint-url http://localhost:4566 update-table
+--table-name dev-subscription
+--attribute-definitions AttributeName=externalRequestId,AttributeType=S
+--global-secondary-index-updates \
+"[{\"Create\":{\"IndexName\": \"index-externalRequestId\",\"KeySchema\":[{\"AttributeName\":\"externalRequestId\",\"KeyType\":\"HASH\"}], \
+\"ProvisionedThroughput\": {\"ReadCapacityUnits\": 10, \"WriteCapacityUnits\": 5 },\"Projection\":{\"ProjectionType\":\"ALL\"}}}]"
 
 ### S3
 

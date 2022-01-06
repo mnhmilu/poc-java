@@ -1,7 +1,10 @@
 package com.mnhmilu.poc.localstack;
 
 import com.mnhmilu.poc.localstack.client.SSMClient;
+import com.mnhmilu.poc.localstack.entity.SubscriptionEntity;
+import com.mnhmilu.poc.localstack.repository.SubscriptionRepository;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -34,4 +37,23 @@ class DemoAWSApplicationTests {
       Map<String, String> apiKeys=ssmClient.getSsmParams();
       assertEquals(apiKeys.get("param1"),"param1value");
     }
+
+    @Autowired
+    SubscriptionRepository subscriptionRepository;
+
+    @Test
+    public void testDynamoDbConfig()
+    {
+        assertEquals("test","test");
+        SubscriptionEntity subscriptionEntity=new SubscriptionEntity();
+        subscriptionEntity.setSubscriptionRequestId("sub123");
+        subscriptionEntity.setWalletNo("01733400896");
+        subscriptionEntity.setAccountNo("123");
+        subscriptionEntity.setExternalRequestId("ex123");
+        subscriptionEntity.setStatus("active");
+        subscriptionRepository.save(subscriptionEntity);
+    }
+
+
+
 }
