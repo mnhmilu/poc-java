@@ -104,6 +104,14 @@ $ sh config/ssm-parameters.sh
 
 > aws sqs --endpoint-url http://localhost:4566 receive-message --queue-url http://localhost:4566/000000000000/dev-poc-queue
 
+> Critical POM Dependency (use maven dependency analyzer if needed)
+```
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-core</artifactId>
+            <version>1.12.37</version>
+        </dependency>
+```
 
 
 ### DynamoDB
