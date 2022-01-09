@@ -6,6 +6,9 @@ docker-compose up -d
 echo "creating sample ssm parameter"
 aws ssm --endpoint-url http://localhost:4566 put-parameter --name "/dev/poc/param1" --type SecureString --value "param1value" --overwrite
 
+echo "creating sample poc queue"
+aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name dev-poc-queue
+
 echo "creating sample dynamodb schema"
 
 aws dynamodb --endpoint-url http://localhost:4566 create-table --table-name dev-poc-subscription --attribute-definitions AttributeName=walletNo,AttributeType=S AttributeName=externalRequestId,AttributeType=S AttributeName=accountNo,AttributeType=S --key-schema AttributeName=walletNo,KeyType=HASH AttributeName=externalRequestId,KeyType=RANGE \

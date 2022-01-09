@@ -96,9 +96,13 @@ $ sh config/ssm-parameters.sh
 
 > aws ssm --endpoint-url http://localhost:4566 get-parameter --name dev/poc/param1
 
-
 ### SQS
-> aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name dev-queue
+> aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name dev-poc-queue
+
+> aws sqs --endpoint-url http://localhost:4566 list-queues
+
+> aws sqs --endpoint-url http://localhost:4566 receive-message --queue-url http://localhost:4566/000000000000/dev-poc-queue
+
 
 
 ### DynamoDB

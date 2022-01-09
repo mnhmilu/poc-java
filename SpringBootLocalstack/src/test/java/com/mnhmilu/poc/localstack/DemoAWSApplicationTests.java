@@ -3,6 +3,8 @@ package com.mnhmilu.poc.localstack;
 import com.mnhmilu.poc.localstack.client.SSMClient;
 import com.mnhmilu.poc.localstack.entity.SubscriptionEntity;
 import com.mnhmilu.poc.localstack.repository.SubscriptionRepository;
+import com.mnhmilu.poc.localstack.service.MessageSenderWithTemplate;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,9 +12,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
+@Slf4j
 class DemoAWSApplicationTests {
 
     @Value("${ssm.endpointUrl}")
@@ -26,8 +29,12 @@ class DemoAWSApplicationTests {
 
     @Value("${spring.application.name}")
     private String appName;
-
     private SSMClient ssmClient;
+    @Autowired
+    private MessageSenderWithTemplate messageSenderWithTemplate;
+
+    @Autowired
+    SubscriptionRepository subscriptionRepository;
 
     @Test
     public void testSSMConfig() {
@@ -37,13 +44,10 @@ class DemoAWSApplicationTests {
       Map<String, String> apiKeys=ssmClient.getSsmParams();
       assertEquals(apiKeys.get("param1"),"param1value");
     }
-
-    @Autowired
-    SubscriptionRepository subscriptionRepository;
-
     @Test
     public void testDynamoDbConfig()
     {
+        log.info("Inserting sample dynamodb item");
         assertEquals("test","test");
         SubscriptionEntity subscriptionEntity=new SubscriptionEntity();
         subscriptionEntity.setSubscriptionRequestId("sub123");
@@ -53,7 +57,16 @@ class DemoAWSApplicationTests {
         subscriptionEntity.setStatus("active");
         subscriptionRepository.save(subscriptionEntity);
     }
+    @Test
+    public void testSQSConfig() {
+        try {
+            log.info("Sending message to dev-poc-queue");
+            messageSenderWithTemplate.send("test-message-new", "dev-poc-queue");
 
-
+        }catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
 
 }
