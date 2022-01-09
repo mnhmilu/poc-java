@@ -1,7 +1,7 @@
 ## POC List
 - [X] Localstack 
 - [X] AWS DynamoDB
-- [ ] AWS SQS
+- [X] AWS SQS
 - [X] AWS SSM 
 - [ ] AWS SNS
 - [ ] AWS ElasticCace
