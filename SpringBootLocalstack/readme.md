@@ -3,6 +3,7 @@
 - [X] AWS DynamoDB
 - [X] AWS SQS
 - [X] AWS SSM 
+- [ ] AWS S3
 - [ ] AWS SNS
 - [ ] AWS ElasticCace
 
