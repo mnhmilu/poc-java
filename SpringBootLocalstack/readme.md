@@ -3,9 +3,9 @@
 - [X] AWS DynamoDB
 - [X] AWS SQS
 - [X] AWS SSM 
-- [ ] AWS S3
+- [X] AWS S3
 - [ ] AWS SNS
-- [ ] AWS ElasticCace
+- [ ] AWS ElasticCahce
 
 ### Localstack Readiness
 #### Prerequisite:
@@ -137,6 +137,8 @@ $ sh config/ssm-parameters.sh
 \"ProvisionedThroughput\": {\"ReadCapacityUnits\": 10, \"WriteCapacityUnits\": 5 },\"Projection\":{\"ProjectionType\":\"ALL\"}}}]"
 
 ### S3
+critical configuration
+```.withPathStyleAccessEnabled(true).build();```
 
 > aws --endpoint-url=http://localhost:4566 s3 mb s3://bucket
 

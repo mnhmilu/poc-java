@@ -56,6 +56,7 @@
             <artifactId>spring-messaging</artifactId>
             <version>5.2.19.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-core</artifactId>
@@ -66,6 +67,12 @@
             <artifactId>spring-cloud-starter-aws-messaging</artifactId>
             <version>2.3.0</version>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-to-slf4j</artifactId>
