@@ -139,4 +139,5 @@ $ sh config/ssm-parameters.sh
 ### S3
 
 > aws --endpoint-url=http://localhost:4566 s3 mb s3://bucket
+
 > aws --endpoint-url=http://localhost:4566 s3 cp ./config/s3/file.txt s3://bucket
