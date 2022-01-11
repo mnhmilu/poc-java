@@ -5,6 +5,8 @@
   - [ ] [Java Security](https://github.com/mnhmilu/poc/tree/master/JavaSecurity#readme)
 - Spring Framework
   - [X] Spring Boot with SSL [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringBootSSL#step-1-pre-pare-backend)
+  - [ ] Spring 
+    - [ ] Redis Client [ref](https://github.com/mnhmilu/poc-java/tree/master/Spring)
   - [ ] Spring Batch
   - [ ] Spring Data
   - [ ] Spring SFTP
