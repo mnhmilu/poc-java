@@ -24,7 +24,7 @@
       <module name="JavaSecurity" target="11" />
       <module name="poc" target="1.5" />
       <module name="Sharedlibrary" target="11" />
-      <module name="Spring" target="11" />
+      <module name="Spring" target="1.8" />
       <module name="SpringBatch" target="11" />
       <module name="SpringBootLocalstack" target="11" />
       <module name="SpringBootSSL" target="11" />
@@ -39,7 +39,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="JavaBasic" options="" />
       <module name="JavaSecurity" options="" />
-      <module name="Spring" options="" />
+      <module name="Spring" options="-parameters" />
       <module name="SpringBatch" options="" />
       <module name="SpringBootLocalstack" options="-parameters" />
       <module name="SpringBootSSL" options="-parameters" />
