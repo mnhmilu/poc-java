@@ -71,6 +71,7 @@ class DemoAWSApplicationTests {
         subscriptionEntity.setExternalRequestId("ex123");
         subscriptionEntity.setStatus("active");
         subscriptionRepository.save(subscriptionEntity);
+        assertEquals(subscriptionRepository.findByWalletNo("01733400896").size(),1);
     }
     @Test
     public void testSQSConfig() {
@@ -94,6 +95,8 @@ class DemoAWSApplicationTests {
             assertEquals(items.size(),1);
 
             S3Object s3object = client.getObject("bucket", "file.txt");
+
+            assertEquals(s3object.getKey(),"file.txt");
 
             S3ObjectInputStream inputStream = s3object.getObjectContent();
             FileUtils.copyInputStreamToFile(inputStream, new File("./config/out.txt"));
