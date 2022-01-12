@@ -7,7 +7,13 @@
 
 ### Spring with Redis
 
->  sudo docker run --name my-first-redis -p 6379:6379 -d redis
+> sudo docker run --name my-first-redis -p 6379:6379 -d redis
+
+> docker exec -it my-first-redis sh
+
+> redis-cli
+
+> ping 
 
 > Do not use version in pom dependency , version compability will be maintained automatically by maven itself
 
