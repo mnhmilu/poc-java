@@ -7,6 +7,8 @@
 
 ### Spring with Redis
 
+>  sudo docker run --name my-first-redis -p 6379:6379 -d redis
+
 > Do not use version in pom dependency , version compability will be maintained automatically by maven itself
 
 Problem was using version tag
