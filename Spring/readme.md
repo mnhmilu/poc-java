@@ -1,5 +1,5 @@
 ## POC List
-- [ ] Spring with Redis
+- [X] Spring with Redis
 
 
 
