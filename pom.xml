@@ -19,6 +19,7 @@
         <module>Sharedlibrary</module>
         <module>SpringBootSSL</module>
         <module>SpringBootLocalstack</module>
+        <module>SpringWebFlux</module>
     </modules>
 
 <!--    <project...>-->

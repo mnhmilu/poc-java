@@ -13,6 +13,7 @@
         <module name="JavaSecurity" />
         <module name="SrpingBootSSL" />
         <module name="SpringSFTP" />
+        <module name="SpringWebFlux" />
         <module name="SpringIntegration" />
         <module name="Spring" />
         <module name="SpringBootLocalstack" />
@@ -32,6 +33,7 @@
       <module name="SpringIntegration" target="11" />
       <module name="SpringRestSSL" target="11" />
       <module name="SpringSFTP" target="11" />
+      <module name="SpringWebFlux" target="11" />
       <module name="SrpingBootSSL" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -47,6 +49,7 @@
       <module name="SpringIntegration" options="" />
       <module name="SpringRestSSL" options="-parameters" />
       <module name="SpringSFTP" options="" />
+      <module name="SpringWebFlux" options="-parameters" />
       <module name="SrpingBootSSL" options="-parameters" />
     </option>
   </component>

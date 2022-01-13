@@ -55,6 +55,7 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
+
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -66,8 +67,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
+                 <executions>
                     <execution>
                         <id>analyze</id>
                         <goals>

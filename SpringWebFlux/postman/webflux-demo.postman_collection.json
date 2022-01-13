@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "c4f1de9d-66a9-48bc-9b5d-c913e56b8a8b",
+		"name": "webflux-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Customer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const uuid = require('uuid');",
+							"pm.environment.set('customerId', uuid.v4());",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerID\": \"{{customerId}}\",\n    \"firstName\": \"Yaseen\",\n    \"lastName\": \"Arafat\",\n    \"contactNo\": \"01719195597\",\n    \"address\": {\n        \"city\": \"Dhaka\",\n        \"country\": \"Bangladesh\",\n        \"state\": \"Dhaka\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/save",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/allCustomerList",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"allCustomerList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sync All Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"get",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sync Create Customer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const uuid = require('uuid');",
+							"pm.environment.set('customerId', uuid.v4());",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Yaseen\",\n    \"lastName\": \"Arafat\",\n    \"customerId\": \"{{customerId}}\",\n    \"email\": \"yeasinarafat.uap.cse@gmail.com\",\n    \"address\": {\n        \"line1\": \"Mohammadpur, Bosila\",\n        \"city\": \"Dhaka\",\n        \"country\": \"Bangladesh\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/add/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"add",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
