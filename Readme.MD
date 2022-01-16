@@ -16,4 +16,4 @@
   - [ ] Spring with Localstack(AWS) [Ref](https://github.com/mnhmilu/poc-java/tree/master/SpringBootLocalstack#poc-list)
   - [ ] Spring Security 
   - [ ] Spring ThymeLeaf
-  - [ ] Spring Flux
+  - [X] Spring Web Flux [ref](https://github.com/mnhmilu/poc-java/tree/master/SpringWebFlux#readme)
