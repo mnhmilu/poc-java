@@ -11,6 +11,8 @@
 
 - for web flux run SpringWebfluxDemoApplication
 - for non web flux run SpringWithoutWebfluxApplication
+- Check basic api test via postman
+- Run jmeter and compare through put
 
 ## Resources:
 - What is Spring Webflux and when to use it ? [link](https://www.youtube.com/watch?v=M3jNn3HMeWg)

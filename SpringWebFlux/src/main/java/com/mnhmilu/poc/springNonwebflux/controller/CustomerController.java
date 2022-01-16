@@ -3,10 +3,10 @@ package com.mnhmilu.poc.springNonwebflux.controller;
 import com.mnhmilu.poc.springNonwebflux.entity.CustomerSync;
 import com.mnhmilu.poc.springNonwebflux.repository.CustomerRepository;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
+@RequestMapping("/nonflux")
 public class CustomerController {
 
     private final CustomerRepository customerRepository;

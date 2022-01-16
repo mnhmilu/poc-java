@@ -10,6 +10,7 @@ import reactor.core.publisher.Mono;
 
 
 @RestController
+@RequestMapping("/flux")
 public class CustomerController {
 
     private final CustomerService customerService;

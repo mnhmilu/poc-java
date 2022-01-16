@@ -1,6 +1,6 @@
 ## POC List
 - [X] Spring with Redis
-
+- [ ] Spring with GraphQL
 
 
 ## Details

@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "c4f1de9d-66a9-48bc-9b5d-c913e56b8a8b",
+		"_postman_id": "8d535373-15d4-4c00-a480-74314fda8f5e",
 		"name": "webflux-demo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Save Customer",
+			"name": "Flux-Save Customer",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -33,11 +33,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/save",
+					"raw": "{{baseUrl}}/flux/save",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
+						"flux",
 						"save"
 					]
 				}
@@ -45,16 +46,17 @@
 			"response": []
 		},
 		{
-			"name": "All Customer",
+			"name": "Flux-All Customer",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/allCustomerList",
+					"raw": "{{baseUrl}}/flux/allCustomerList",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
+						"flux",
 						"allCustomerList"
 					]
 				}
@@ -62,18 +64,19 @@
 			"response": []
 		},
 		{
-			"name": "Sync All Customer",
+			"name": "NonFlux- All Customer",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/get/customers",
+					"raw": "http://localhost:8080/nonflux/get/customers",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9081",
+					"port": "8080",
 					"path": [
+						"nonflux",
 						"get",
 						"customers"
 					]
@@ -82,7 +85,7 @@
 			"response": []
 		},
 		{
-			"name": "Sync Create Customer",
+			"name": "NonFlux-Create Customer",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -109,13 +112,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/add/customer",
+					"raw": "http://localhost:8080/nonflux/add/customer",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "9081",
+					"port": "8080",
 					"path": [
+						"nonflux",
 						"add",
 						"customer"
 					]
