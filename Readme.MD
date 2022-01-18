@@ -17,4 +17,4 @@
   - [ ] Spring Security 
   - [ ] Spring ThymeLeaf
   - [X] Spring Web Flux [ref](https://github.com/mnhmilu/poc-java/tree/master/SpringWebFlux#readme)
-  - [ ] Spring with Minikube 
+  - [ ] Spring with Minikube [ref](https://github.com/mnhmilu/poc-java/tree/master/SpringMinikube)
