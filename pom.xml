@@ -20,6 +20,7 @@
         <module>SpringBootSSL</module>
         <module>SpringBootLocalstack</module>
         <module>SpringWebFlux</module>
+        <module>SpringMinikube</module>
     </modules>
 
 <!--    <project...>-->

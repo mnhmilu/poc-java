@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBatch" />
         <module name="SpringData" />
+        <module name="SpringMinikube" />
         <module name="JavaBasic" />
         <module name="JavaSecurity" />
         <module name="SrpingBootSSL" />
@@ -31,6 +32,7 @@
       <module name="SpringBootSSL" target="11" />
       <module name="SpringData" target="11" />
       <module name="SpringIntegration" target="11" />
+      <module name="SpringMinikube" target="11" />
       <module name="SpringRestSSL" target="11" />
       <module name="SpringSFTP" target="11" />
       <module name="SpringWebFlux" target="11" />
