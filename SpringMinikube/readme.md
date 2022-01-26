@@ -65,9 +65,7 @@ spec:
                 port:
                   number: 80
 ```
-How to run ingress?
-
-How to run?
+How to implement ingress?
 
 ```
 minikube start --driver=virtualbox
