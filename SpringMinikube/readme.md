@@ -24,6 +24,31 @@
 
 > DYNAMO_ENDPOINT=[http://192.168.49.2:31001](http://192.168.49.2:31001/) dynamodb-admin --open
 
+## Code Example
+
+ingress.yaml
+
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: days-app-ingress
+  namespace: sample
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix  
+            backend:
+              service:
+                name: static-web-service
+                port:
+                  number: 80
+```
+
 
 
 
