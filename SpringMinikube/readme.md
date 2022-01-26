@@ -26,6 +26,19 @@
 
 ## Code Example
 
+### Ingress
+---
+
+namespace.yaml
+
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sample
+```
+
+
 ingress.yaml
 
 ```
