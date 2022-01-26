@@ -84,3 +84,5 @@ Finally, in the browser, search for minikube-example.com
 - [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/)
   - [Major Components (Nodes,POD,etc)](https://kubernetes.io/docs/concepts/overview/components/)
 - [Minikube-Getting Started](https://minikube.sigs.k8s.io/docs/start/)
+- [ingress-git](https://github.com/cloudxlab/minikube-static-app/tree/main/k8s)
+  - [You tube tutorial](https://www.youtube.com/watch?v=Gip-Q6AWpcY)   
